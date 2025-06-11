@@ -3,9 +3,16 @@ import { useState } from "react";
 import Image from "next/image";
 import About from "./components/about";
 import Projects from "./components/projects";
+import Professional from "./components/professional";
 
 export default function Home() {
   const [section, setSection] = useState("about");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavClick = (sectionName) => {
+    setSection(sectionName);
+    setMenuOpen(false); // Close menu on mobile after click
+  };
 
   return (
     <main className="">
@@ -13,7 +20,18 @@ export default function Home() {
       <nav className="w-full bg-white shadow mb-8">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <span className="text-3xl font-extrabold mb-2">brad hendrickson</span>
-          <div className="space-x-6">
+          {/* Hamburger button */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10"
+            aria-label="Toggle navigation menu"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className={`block w-6 h-0.5 bg-gray-700 mb-1 transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 mb-1 transition-all ${menuOpen ? "opacity-0" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+          </button>
+          {/* Desktop nav */}
+          <div className="space-x-6 hidden md:flex">
             <button
               onClick={() => setSection("about")}
               className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
@@ -30,8 +48,45 @@ export default function Home() {
             >
               projects
             </button>
+            <button
+              onClick={() => setSection("professional")}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
+                section === "professional" ? "underline text-blue-500" : ""
+              }`}
+            >
+              professional
+            </button>
           </div>
         </div>
+        {/* Mobile nav */}
+        {menuOpen && (
+          <div className="md:hidden px-4 pb-4">
+            <button
+              onClick={() => handleNavClick("about")}
+              className={`block w-full text-left py-2 text-xl text-gray-700 hover:text-blue-500 font-bold ${
+                section === "about" ? "underline text-blue-500" : ""
+              }`}
+            >
+              about
+            </button>
+            <button
+              onClick={() => handleNavClick("projects")}
+              className={`block w-full text-left py-2 text-xl text-gray-700 hover:text-blue-500 font-bold ${
+                section === "projects" ? "underline text-blue-500" : ""
+              }`}
+            >
+              projects
+            </button>
+            <button
+              onClick={() => handleNavClick("professional")}
+              className={`block w-full text-left py-2 text-xl text-gray-700 hover:text-blue-500 font-bold ${
+                section === "professional" ? "underline text-blue-500" : ""
+              }`}
+            >
+              professional
+            </button>
+          </div>
+        )}
       </nav>
 
       <div>
@@ -46,7 +101,13 @@ export default function Home() {
             <Projects />
           </section>
         )}
-      </div>  
+
+        {section === "professional" && (
+          <section id="professional">
+            <Professional />
+          </section>
+        )}
+      </div>
     </main>
   );
 }
