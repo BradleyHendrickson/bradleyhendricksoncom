@@ -13,8 +13,12 @@ export default function Home() {
   const handleNavClick = (sectionName) => {
     setSection(sectionName);
     setMenuOpen(false); // Close menu on mobile after click
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Reset page scroll
+    //window.scrollTo({ top: 0, behavior: "smooth" }); // Reset page scroll
   };
+
+  useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, [section]);
 
   return (
     <main className="">
