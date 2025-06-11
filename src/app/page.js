@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow mb-8">
+      <nav className="w-full bg-white shadow mb-8 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <span className="text-3xl font-extrabold mb-2">brad hendrickson</span>
           {/* Hamburger button */}
