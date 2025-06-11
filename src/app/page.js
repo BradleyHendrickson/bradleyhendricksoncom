@@ -42,11 +42,11 @@ export default function Home() {
         )}
 
         {section === "projects" && (
-          <section id="projects" className="text-left">
-\            <Projects />
+          <section id="projects">
+            <Projects />
           </section>
         )}
-      </div>
+      </div>  
     </main>
   );
 }
