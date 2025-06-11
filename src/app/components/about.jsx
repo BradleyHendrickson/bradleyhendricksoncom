@@ -79,7 +79,7 @@ export default function About() {
                                 "RESTful APIs", "GraphQL",
                                 "Git", "GitHub", "Agile",
                                 "SQL Server", "PostgreSQL",
-                                "C# / .NET"
+                                "C# / .NET", "Supabase"
                             ].map(skill => (
                                 <span
                                     key={skill}
