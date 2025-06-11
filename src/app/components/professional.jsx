@@ -1,7 +1,7 @@
 export default function Professional() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="mt-12">
+    <div className="max-w-4xl mx-auto px-4 py-12 bg-white">
+      <div className="">
         <h1 className="text-3xl font-extrabold mb-4 tracking-tight">Professional Experience</h1>
 
         <p className="text-xl font-extrabold text-gray-800 mb-2">
