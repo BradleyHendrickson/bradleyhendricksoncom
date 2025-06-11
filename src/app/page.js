@@ -4,6 +4,7 @@ import Image from "next/image";
 import About from "./components/about";
 import Projects from "./components/projects";
 import Professional from "./components/professional";
+import More from "./components/more";
 
 export default function Home() {
   const [section, setSection] = useState("about");
@@ -56,6 +57,14 @@ export default function Home() {
             >
               professional
             </button>
+            <button
+              onClick={() => setSection("more")}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
+                section === "more" ? "underline text-blue-500" : ""
+              }`}
+            >
+              more
+            </button>
           </div>
         </div>
         {/* Mobile nav */}
@@ -107,6 +116,14 @@ export default function Home() {
             <Professional />
           </section>
         )}
+
+        {section === "more" && (
+          <section id="more">
+            <More />
+          </section>
+        )}
+          
+
       </div>
     </main>
   );

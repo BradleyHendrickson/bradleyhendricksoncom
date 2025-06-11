@@ -29,7 +29,7 @@ export default function About() {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="absolute top-4 right-4 text-blue-600 hover:text-blue-800"
+                            className="absolute top-4 right-4 text-gray-400 hover:text-blue-600"
                             aria-label={`View ${project.title} project`}
                         >
                             <FontAwesomeIcon icon={faExternalLinkAlt} size="lg" />
