@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import About from "./components/about";
 import Projects from "./components/projects";
@@ -11,14 +11,15 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNavClick = (sectionName) => {
-    setSection(sectionName);
-    setMenuOpen(false); // Close menu on mobile after click
-    //window.scrollTo({ top: 0, behavior: "smooth" }); // Reset page scroll
+    if (section !== sectionName) {
+      setSection(sectionName);
+    }
+    setMenuOpen(false);
   };
 
   useEffect(() => {
-		window.scrollTo({ top: 0, behavior: "smooth" });
-	}, [section]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [section]);
 
   return (
     <main className="">
@@ -40,33 +41,25 @@ export default function Home() {
           <div className="space-x-6 hidden md:flex">
             <button
               onClick={() => setSection("about")}
-              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
-                section === "about" ? "underline text-blue-500" : ""
-              }`}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${section === "about" ? "underline text-blue-500" : ""}`}
             >
               about
             </button>
             <button
               onClick={() => setSection("projects")}
-              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
-                section === "projects" ? "underline text-blue-500" : ""
-              }`}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${section === "projects" ? "underline text-blue-500" : ""}`}
             >
               projects
             </button>
             <button
               onClick={() => setSection("professional")}
-              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
-                section === "professional" ? "underline text-blue-500" : ""
-              }`}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${section === "professional" ? "underline text-blue-500" : ""}`}
             >
               professional
             </button>
             <button
               onClick={() => setSection("more")}
-              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${
-                section === "more" ? "underline text-blue-500" : ""
-              }`}
+              className={`text-xl text-gray-700 hover:text-blue-500 font-bold ${section === "more" ? "underline text-blue-500" : ""}`}
             >
               more
             </button>
@@ -106,9 +99,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => handleNavClick("more")}
-            className={`block w-full text-left py-2 text-xl text-gray-700 hover:text-blue-500 font-bold ${
-              section === "more" ? "underline text-blue-500" : ""
-            }`}
+            className={`block w-full text-left py-2 text-xl text-gray-700 hover:text-blue-500 font-bold ${section === "more" ? "underline text-blue-500" : ""}`}
           >
             more
           </button>
