@@ -6,14 +6,14 @@ const projects = [
         title: "Moonstone",
         description: "lightweight time tracking app",
         link: "https://moonstone-tracker.com",
-        image: "/moonstone.png",
+        image: "/moonstone.jpg",
         tags: ["React", "Node.js", "Supabase", "Vercel", "Bootstrap"]
     },
     {
         title: "WA Fish Stock Notifier",
         description: "subscribe to lake fish stocking updates",
         link: "https://wa-fish-stock-notifier.com",
-        image: "/wa-fish-stock-notifier.png",
+        image: "/wa-fish-stock-notifier.jpg",
         tags: ["React", "Next.js", "Supabase", "Vercel", "Tailwind CSS"]
     }
 ];
