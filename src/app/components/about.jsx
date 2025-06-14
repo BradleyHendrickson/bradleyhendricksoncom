@@ -58,7 +58,7 @@ export default function About() {
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-blue-700 hover:text-blue-900 hover:underline underline-offset-4 decoration-2 font-medium transition-colors"
+                                    className="flex items-center gap-3 text-blue-500 hover:text-blue-900 hover:underline underline-offset-4 decoration-2 font-medium transition-colors"
                                     aria-label={label}
                                 >
                                     <FontAwesomeIcon icon={icon} className="text-lg" />

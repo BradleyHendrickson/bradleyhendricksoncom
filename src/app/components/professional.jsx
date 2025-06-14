@@ -6,7 +6,7 @@ export default function Professional() {
 
         <p className="text-xl font-extrabold text-gray-800 mb-2">
           Solutions Architect at{" "}
-          <a href="https://silvertreksystems.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+          <a href="https://silvertreksystems.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
             Silvertrek Systems
           </a>
           <span className="text-sm text-gray-500 block font-normal">May 2019 – Present · Battle Ground, WA</span>
