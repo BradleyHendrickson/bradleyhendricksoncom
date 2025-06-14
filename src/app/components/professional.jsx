@@ -39,7 +39,7 @@ export default function Professional() {
           <li>
             <strong>Viewpoint Vista Customizations</strong>
             <ul className="list-disc pl-6 mt-1 space-y-1">
-              <li>Created and maintained advanced customizations for Viewpoint Vista using T-SQL and direct database integrations.</li>
+              <li>Created and maintained advanced customizations for Viewpoint Vista using T-SQL stored procedures, triggers and functions.</li>
               <li>Optimized accounting workflows and ensured reliable data synchronization between systems.</li>
             </ul>
           </li>
