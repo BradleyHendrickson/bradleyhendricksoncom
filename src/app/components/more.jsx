@@ -5,7 +5,7 @@ import { faItchIo } from "@fortawesome/free-brands-svg-icons";
 export default function More() {
     const links = [
         {
-            title: "3D Printing Designs",
+            title: "Design for 3D Printing",
             description: "Check out my 3D printable designs on Printables.com",
             url: "https://www.printables.com/@BradH97_1804143",
             label: "Printables.com",
