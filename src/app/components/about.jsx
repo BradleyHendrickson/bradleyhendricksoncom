@@ -83,7 +83,7 @@ export default function About() {
                             ].map(skill => (
                                 <span
                                     key={skill}
-                                    className="inline-block bg-blue-100 border border-black rounded-sm text-black text-xs px-3 py-1 font-semibold tracking-wider"
+                                    className="inline-block bg-orange-100 border border-black rounded-sm text-black text-xs px-3 py-1 font-semibold tracking-wider"
                                 >
                                     {skill}
                                 </span>

@@ -48,7 +48,7 @@ export default function About() {
 							{project.tags.map((tag, tagIndex) => (
 								<span
 									key={tagIndex}
-									className="inline-block bg-blue-100 border border-black rounded-sm text-black text-xs px-3 py-1 font-semibold tracking-wider mr-2 mb-2"
+									className="inline-block bg-orange-100 border border-black rounded-sm text-black text-xs px-3 py-1 font-semibold tracking-wider mr-2 mb-2"
 								>
 									{tag}
 								</span>
